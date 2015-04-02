@@ -5,4 +5,4 @@
 * запускать parent_book.py
 * для работы нужено установить rarfile (`pip install rarfile`)
 
-ps. Comment's is boring
+ps. Comments are boring
