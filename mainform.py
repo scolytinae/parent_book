@@ -126,11 +126,11 @@ class MainForm(QtGui.QDialog):
 
     def show_settings_dialog(self):
         dialog = SettingsDialog()
-        dialog.leSource.setText(self.source)
-        dialog.leDest.setText(self.dest)
+        dialog.source = self.source
+        dialog.dest = self.dest
         if dialog.exec_():
-            self.source = unicode(dialog.leSource.text())
-            self.dest = unicode(dialog.leDest.text())
+            self.source = dialog.source
+            self.dest = dialog.dest
 
     def files_changed(self, dir):
         if dir == self.source:

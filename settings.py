@@ -14,11 +14,27 @@ class SettingsDialog(QtGui.QDialog):
         self.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), self.accept)
         self.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), self.reject)
 
+    @property
+    def source(self):
+        return unicode(self.leSource.text())
+
+    @source.setter
+    def source(self, value):
+        self.leSource.setText(value)
+
+    @property
+    def dest(self):
+        return unicode(self.leDest.text())
+
+    @dest.setter
+    def dest(self, value):
+        self.leDest.setText(value)
+
     def show_source_dialog(self):
-        self.leSource.setText(self.show_file_dialog(self.leSource.text()))
+        self.source = self.show_file_dialog(self.source)
 
     def show_dest_dialog(self):
-        self.leDest.setText(self.show_file_dialog(self.leDest.text()))
+        self.dest = self.show_file_dialog(self.dest)
 
     def show_file_dialog(self, default_dir):
         dialog = QtGui.QFileDialog()
