@@ -1,1 +1,5 @@
-Book unpacker for parents
+# Book unpacker for parents
+Никак не могу научить людей распаковывать книжки куда надо и потом все очищать. 
+Теперь можно попробывать так.
+* попробывал PyQt4
+* для работы нужено установить rarfile (`pip install rarfile`)
